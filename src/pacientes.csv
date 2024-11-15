@@ -1,0 +1,21 @@
+ID,Nome,Idade,Sintomas,Medicamentos,Especialidade,Prioridade
+1,João,57,Convulsões,Topiramato,Neurologia,8
+2,Carlos,35,Coceira,Cetirizina,Dermatologia,10
+3,Larissa,1,Rigidez,Naproxeno,Ortopedia,6
+4,Maria,88,Convulsões,Carbamazepina,Neurologia,6
+5,José,96,Dor no peito,Bisoprolol,Cardiologia,10
+6,Ana,17,Tontura,Carbamazepina,Neurologia,7
+7,José,32,Dor nas articulações,Cetoprofeno,Ortopedia,6
+8,Maria,71,Dor no peito,Bisoprolol,Cardiologia,8
+9,Fernanda,26,Descamação,Cetirizina,Dermatologia,1
+10,Maria,58,Palpitações,Aspirina,Cardiologia,4
+11,Lucas,34,Dor nas articulações,Ibuprofeno,Ortopedia,6
+12,Carlos,24,Tontura,Clonazepam,Neurologia,1
+13,Julia,18,Inchaço,Naproxeno,Ortopedia,10
+14,Maria,97,Rigidez,Cetoprofeno,Ortopedia,1
+15,Larissa,66,Irritação na pele,Cetirizina,Dermatologia,8
+16,José,48,Dor no peito,Aspirina,Cardiologia,4
+17,Carlos,7,Falta de ar,Bisoprolol,Cardiologia,4
+18,Fernanda,2,Tontura,Carbamazepina,Neurologia,5
+19,Maria,85,Dor no peito,Bisoprolol,Cardiologia,10
+20,Lucas,29,Coceira,Clobetasol,Dermatologia,7
