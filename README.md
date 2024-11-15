@@ -84,18 +84,4 @@ Se você ainda não tem o MinGW instalado, siga as etapas abaixo:
 2. **Alterar especialidades ou sintomas**:
    - No código, a lista de especialidades e sintomas pode ser alterada conforme necessário, modificando as variáveis `sintomasPorEspecialidade` e `especialidades`.
 
-### 6. Contribuindo
-
-Se desejar contribuir para o projeto, siga as etapas abaixo:
-
-1. Faça um fork do repositório.
-2. Crie uma nova branch (`git checkout -b minha-contribuicao`).
-3. Faça as modificações necessárias e adicione os arquivos modificados (`git add .`).
-4. Faça um commit das suas alterações (`git commit -m "Minha contribuição"`).
-5. Envie a branch para o repositório remoto (`git push origin minha-contribuicao`).
-6. Abra um pull request para revisão.
-
-## Licença
-
-Este projeto é licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
