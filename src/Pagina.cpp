@@ -32,16 +32,18 @@ bool Pagina::addelemento(ElementoPaginaFolha *&elemento)
 
 
 
+
     
     
     // Verifica se ainda há espaço livre
     
     if (tamanhoLivre <= 0) {
+
+        
         
         elementos[tamanho - tamanhoLivre] = *elemento;
         
-        
-        this->oredenarArray(tamanho);
+        this->oredenarArray(tamanho + 1);
 
         int meio = tamanho / 2;
 
@@ -51,78 +53,27 @@ bool Pagina::addelemento(ElementoPaginaFolha *&elemento)
         
         return false;
     }
-
-    // Insere o novo elemento na última posição disponível
-    elementos[tamanho - tamanhoLivre - 1] = *elemento;
-    tamanhoLivre--;
-    
-
-
-
-    this->oredenarArray(tamanho - tamanhoLivre - 1);
-
-    return true;
-
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-bool Pagina::addelementoIndice(ElementoPagina *&elemento)
-{
-
-
-
-    
-    
-    // Verifica se ainda há espaço livre
-    
-    if (tamanhoLivre <= 0) {
-        
-        elementos[tamanho - tamanhoLivre] = *dynamic_cast<ElementoPaginaFolha*>(elemento);
-        
-        
-        this->oredenarArray(tamanho);
-
-        int meio = tamanho / 2;
-
-        elemento = &elementos[meio];
-
+    else{
 
         
-        return false;
+
+        // Insere o novo elemento na última posição disponível
+        elementos[tamanho - tamanhoLivre] = *elemento;
+        tamanhoLivre--;
+        
+
+
+
+        this->oredenarArray(tamanho - tamanhoLivre);
+
+        return true;
+
+
     }
 
-    // Insere o novo elemento na última posição disponível
-    elementos[tamanho - tamanhoLivre - 1] = *dynamic_cast<ElementoPaginaFolha*>(elemento);
-    tamanhoLivre--;
     
-
-
-
-    this->oredenarArray(tamanho - tamanhoLivre - 1);
-
-    return true;
-
     
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -134,15 +85,40 @@ int Pagina::getTamanhoLivre(){
 void Pagina::oredenarArray(int indexOrdencao)
 {
 
+    
+    
     // Realiza uma ordenação decrescente para manter o array ordenado
-    for (int i = 0; i < indexOrdencao - 1; ++i) {
+
+
+    for (int i = 0; i < indexOrdencao; ++i) {
+
+        if (indexOrdencao == 11)
+        {
+            std::cout << "Paciente: "<< i << std::endl;
+
+            elementos[i].getChave()->exibirDados();
+
+            std::cout << "================================= "<< std::endl;
+
+        }
+        
+        
+
         for (int j = i + 1; j < indexOrdencao; ++j) {
+
+            
+                
+
+                
+
             if (elementos[i].getChave()->prioridade <= elementos[j].getChave()->prioridade) { // Ordena por chave decrescente
                 // Troca os elementos
                 ElementoPaginaFolha temp = elementos[i];
                 elementos[i] = elementos[j];
                 elementos[j] = temp;
             }
+
+            
         }
     }
 
@@ -183,9 +159,40 @@ ElementoPaginaFolha *Pagina::buscarPorPrioridade(int prioridade)
     return  &elementos[tamanho]; // Retorna nullptr se não encontrar
 }
 
+bool Pagina::addelementoIndice(ElementoPagina *&elemento)
+{
+
+    
+    
+    // Verifica se ainda há espaço livre
+    
+    if (tamanhoLivre <= 0) {
+        
+        elementos[tamanho - tamanhoLivre] = *dynamic_cast<ElementoPaginaFolha*>(elemento);
+        
+        
+        this->oredenarArray(tamanho);
+
+        int meio = tamanho / 2;
+
+        elemento = &elementos[meio];
+
+
+        
+        return false;
+    }
+
+    // Insere o novo elemento na última posição disponível
+    elementos[tamanho - tamanhoLivre - 1] = *dynamic_cast<ElementoPaginaFolha*>(elemento);
+    tamanhoLivre--;
+    
 
 
 
+    this->oredenarArray(tamanho - tamanhoLivre - 1);
+
+    return true;
+}
 
 Pagina* Pagina::split() {
     // Calcula o índice do meio

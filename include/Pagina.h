@@ -1,10 +1,12 @@
 
-
 #ifndef PAGINA_H
 #define PAGINA_H
 
 
+
+
 class ElementoPaginaFolha;
+class ElementoPagina;
 
 class Pagina
 {

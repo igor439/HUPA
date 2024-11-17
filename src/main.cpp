@@ -5,7 +5,7 @@
 #include "..\include\Controller.h"
 #include "..\include\Pagina.h"
 #include "..\include\ElementoPaginaFolha.h"
-
+#include "..\include\ElementoPagina.h"
 
 int main() {
 
@@ -22,7 +22,9 @@ int main() {
     std::vector<Paciente> pacientes = especialidade.carregarPacientesDoCSV(nomeArquivo);
 
 
-    
+
+
+
 
     if(!pacientes.empty()){
 

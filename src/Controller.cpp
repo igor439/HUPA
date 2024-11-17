@@ -99,7 +99,7 @@ void Controller::exportarPacientesCSV(const std::string& nomeArquivo) const {
     std::uniform_int_distribution<> idadeDist(1, 100);
     std::uniform_int_distribution<> prioridadeDist(1, 10);
 
-    for (int i = 0; i < 20; ++i) {
+    for (int i = 0; i < 200; ++i) {
         int idade  = idadeDist(gen);
         std::string especialidade = gerarEspecialidadeAleatoria(idade);
 

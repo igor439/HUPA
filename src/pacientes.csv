@@ -19,3 +19,183 @@ ID,Nome,Idade,Sintomas,Medicamentos,Especialidade,Prioridade
 18,Fernanda,2,Tontura,Carbamazepina,Neurologia,5
 19,Maria,85,Dor no peito,Bisoprolol,Cardiologia,10
 20,Lucas,29,Coceira,Clobetasol,Dermatologia,7
+21,José,93,Convulsões,Topiramato,Neurologia,6
+22,Fernanda,85,Dor de cabeça,Clonazepam,Neurologia,1
+23,Carlos,57,Tontura,Clonazepam,Neurologia,3
+24,Ana,89,Rigidez,Ibuprofeno,Ortopedia,8
+25,Lucas,1,Dor no peito,Atorvastatina,Cardiologia,8
+26,Ana,27,Palpitações,Aspirina,Cardiologia,5
+27,Lucas,34,Tontura,Topiramato,Neurologia,3
+28,Julia,94,Dor nas articulações,Ibuprofeno,Ortopedia,9
+29,João,48,Inchaço,Ibuprofeno,Ortopedia,8
+30,Julia,98,Tontura,Carbamazepina,Neurologia,9
+31,Pedro,77,Palpitações,Atorvastatina,Cardiologia,4
+32,Lucas,71,Dor no peito,Atorvastatina,Cardiologia,7
+33,Maria,17,Dor de cabeça,Clonazepam,Neurologia,7
+34,Julia,50,Inchaço,Ibuprofeno,Ortopedia,1
+35,Carlos,65,Falta de ar,Bisoprolol,Cardiologia,8
+36,José,67,Tontura,Carbamazepina,Neurologia,9
+37,Carlos,86,Dor de cabeça,Clonazepam,Neurologia,2
+38,Larissa,54,Dor no peito,Bisoprolol,Cardiologia,1
+39,Julia,31,Dor no peito,Bisoprolol,Cardiologia,5
+40,João,33,Palpitações,Aspirina,Cardiologia,1
+41,João,42,Tontura,Topiramato,Neurologia,7
+42,Fernanda,57,Dor de cabeça,Carbamazepina,Neurologia,7
+43,Ana,70,Coceira,Cetirizina,Dermatologia,8
+44,João,58,Descamação,Hidrocortisona,Dermatologia,5
+45,Ana,32,Rigidez,Naproxeno,Ortopedia,8
+46,Julia,100,Dor nas articulações,Ibuprofeno,Ortopedia,8
+47,Larissa,59,Descamação,Clobetasol,Dermatologia,10
+48,Fernanda,40,Tontura,Topiramato,Neurologia,2
+49,Lucas,41,Dor de cabeça,Clonazepam,Neurologia,5
+50,Pedro,15,Irritação na pele,Clobetasol,Dermatologia,9
+51,Ana,64,Dor no peito,Atorvastatina,Cardiologia,6
+52,Carlos,36,Rigidez,Cetoprofeno,Ortopedia,4
+53,João,16,Dor no peito,Aspirina,Cardiologia,8
+54,Fernanda,10,Tontura,Topiramato,Neurologia,5
+55,Pedro,16,Coceira,Cetirizina,Dermatologia,6
+56,João,84,Rigidez,Naproxeno,Ortopedia,8
+57,Larissa,62,Rigidez,Naproxeno,Ortopedia,2
+58,Lucas,84,Tontura,Carbamazepina,Neurologia,2
+59,José,12,Dor nas articulações,Ibuprofeno,Ortopedia,8
+60,Ana,81,Rigidez,Naproxeno,Ortopedia,5
+61,José,26,Coceira,Hidrocortisona,Dermatologia,3
+62,Maria,7,Tontura,Carbamazepina,Neurologia,9
+63,José,35,Tontura,Topiramato,Neurologia,4
+64,Pedro,50,Rigidez,Naproxeno,Ortopedia,9
+65,Fernanda,85,Dor no peito,Bisoprolol,Cardiologia,10
+66,Fernanda,39,Dor de cabeça,Carbamazepina,Neurologia,8
+67,Larissa,46,Falta de ar,Atorvastatina,Cardiologia,4
+68,José,28,Inchaço,Cetoprofeno,Ortopedia,5
+69,Pedro,20,Inchaço,Ibuprofeno,Ortopedia,2
+70,Fernanda,33,Descamação,Hidrocortisona,Dermatologia,5
+71,Pedro,71,Convulsões,Carbamazepina,Neurologia,6
+72,Fernanda,21,Palpitações,Atorvastatina,Cardiologia,9
+73,João,47,Convulsões,Topiramato,Neurologia,8
+74,José,34,Irritação na pele,Hidrocortisona,Dermatologia,4
+75,Julia,99,Inchaço,Cetoprofeno,Ortopedia,10
+76,Larissa,78,Convulsões,Clonazepam,Neurologia,6
+77,Larissa,14,Rigidez,Cetoprofeno,Ortopedia,2
+78,Lucas,6,Dificuldade para respirar,Amoxicilina,Pediatria,4
+79,Maria,51,Descamação,Cetirizina,Dermatologia,8
+80,Larissa,56,Tontura,Topiramato,Neurologia,6
+81,Carlos,44,Dor no peito,Atorvastatina,Cardiologia,9
+82,José,43,Rigidez,Naproxeno,Ortopedia,4
+83,Pedro,8,Dor de cabeça,Clonazepam,Neurologia,8
+84,Pedro,14,Dor de cabeça,Clonazepam,Neurologia,3
+85,João,96,Coceira,Cetirizina,Dermatologia,5
+86,Pedro,18,Tontura,Topiramato,Neurologia,3
+87,Lucas,42,Descamação,Hidrocortisona,Dermatologia,4
+88,José,46,Dor no peito,Bisoprolol,Cardiologia,2
+89,Carlos,3,Dificuldade para respirar,Amoxicilina,Pediatria,8
+90,Maria,56,Dor nas articulações,Naproxeno,Ortopedia,6
+91,Lucas,71,Rigidez,Cetoprofeno,Ortopedia,9
+92,Lucas,49,Coceira,Hidrocortisona,Dermatologia,8
+93,João,45,Inchaço,Naproxeno,Ortopedia,10
+94,Julia,68,Dor nas articulações,Cetoprofeno,Ortopedia,10
+95,Carlos,2,Dificuldade para respirar,Dipirona,Pediatria,10
+96,João,42,Dor nas articulações,Naproxeno,Ortopedia,9
+97,Julia,21,Inchaço,Naproxeno,Ortopedia,8
+98,Ana,96,Falta de ar,Atorvastatina,Cardiologia,9
+99,Ana,90,Dor nas articulações,Naproxeno,Ortopedia,4
+100,Larissa,99,Rigidez,Ibuprofeno,Ortopedia,4
+101,Pedro,20,Convulsões,Topiramato,Neurologia,1
+102,Julia,22,Convulsões,Topiramato,Neurologia,9
+103,João,3,Palpitações,Aspirina,Cardiologia,7
+104,Maria,46,Palpitações,Atorvastatina,Cardiologia,7
+105,Larissa,23,Palpitações,Bisoprolol,Cardiologia,7
+106,Larissa,81,Palpitações,Bisoprolol,Cardiologia,4
+107,José,64,Irritação na pele,Clobetasol,Dermatologia,6
+108,Maria,92,Irritação na pele,Clobetasol,Dermatologia,4
+109,Maria,82,Dor de cabeça,Clonazepam,Neurologia,8
+110,Fernanda,10,Coceira,Cetirizina,Dermatologia,9
+111,João,6,Dor nas articulações,Cetoprofeno,Ortopedia,6
+112,João,38,Tontura,Clonazepam,Neurologia,1
+113,Ana,62,Palpitações,Aspirina,Cardiologia,3
+114,José,20,Irritação na pele,Hidrocortisona,Dermatologia,2
+115,Lucas,42,Dor no peito,Atorvastatina,Cardiologia,4
+116,Carlos,46,Falta de ar,Atorvastatina,Cardiologia,3
+117,Ana,89,Falta de ar,Bisoprolol,Cardiologia,3
+118,Larissa,45,Convulsões,Topiramato,Neurologia,4
+119,Pedro,28,Falta de ar,Atorvastatina,Cardiologia,4
+120,Maria,17,Convulsões,Topiramato,Neurologia,6
+121,Ana,62,Tontura,Carbamazepina,Neurologia,9
+122,Carlos,63,Palpitações,Aspirina,Cardiologia,8
+123,Fernanda,50,Palpitações,Atorvastatina,Cardiologia,3
+124,Carlos,99,Falta de ar,Atorvastatina,Cardiologia,4
+125,João,7,Palpitações,Bisoprolol,Cardiologia,10
+126,Julia,41,Irritação na pele,Clobetasol,Dermatologia,4
+127,Ana,55,Descamação,Hidrocortisona,Dermatologia,4
+128,João,38,Rigidez,Cetoprofeno,Ortopedia,3
+129,Maria,31,Coceira,Cetirizina,Dermatologia,8
+130,Pedro,42,Irritação na pele,Cetirizina,Dermatologia,9
+131,José,43,Falta de ar,Atorvastatina,Cardiologia,5
+132,José,64,Dor de cabeça,Carbamazepina,Neurologia,5
+133,Fernanda,19,Dor nas articulações,Ibuprofeno,Ortopedia,6
+134,Julia,74,Tontura,Topiramato,Neurologia,4
+135,Larissa,9,Dor nas articulações,Ibuprofeno,Ortopedia,1
+136,Fernanda,57,Dor de cabeça,Carbamazepina,Neurologia,2
+137,José,71,Falta de ar,Atorvastatina,Cardiologia,3
+138,Lucas,74,Dor no peito,Bisoprolol,Cardiologia,9
+139,Julia,84,Irritação na pele,Hidrocortisona,Dermatologia,10
+140,Julia,17,Descamação,Clobetasol,Dermatologia,6
+141,Carlos,89,Tontura,Clonazepam,Neurologia,4
+142,Pedro,97,Dor no peito,Bisoprolol,Cardiologia,10
+143,Larissa,75,Irritação na pele,Cetirizina,Dermatologia,7
+144,João,51,Descamação,Clobetasol,Dermatologia,2
+145,Ana,56,Convulsões,Topiramato,Neurologia,3
+146,Maria,87,Falta de ar,Atorvastatina,Cardiologia,4
+147,Lucas,6,Dificuldade para respirar,Dipirona,Pediatria,8
+148,Larissa,40,Dor de cabeça,Clonazepam,Neurologia,8
+149,João,51,Rigidez,Ibuprofeno,Ortopedia,7
+150,Larissa,5,Tosse,Paracetamol,Pediatria,8
+151,Julia,8,Rigidez,Naproxeno,Ortopedia,4
+152,Ana,42,Coceira,Clobetasol,Dermatologia,10
+153,Ana,12,Tontura,Clonazepam,Neurologia,9
+154,João,62,Palpitações,Bisoprolol,Cardiologia,6
+155,Larissa,89,Rigidez,Cetoprofeno,Ortopedia,1
+156,Carlos,78,Coceira,Clobetasol,Dermatologia,7
+157,Fernanda,3,Dor no peito,Atorvastatina,Cardiologia,4
+158,Lucas,75,Dor no peito,Atorvastatina,Cardiologia,8
+159,Carlos,31,Dor de cabeça,Clonazepam,Neurologia,2
+160,Larissa,19,Palpitações,Bisoprolol,Cardiologia,2
+161,Fernanda,13,Coceira,Cetirizina,Dermatologia,10
+162,Julia,34,Dor no peito,Atorvastatina,Cardiologia,4
+163,Julia,17,Irritação na pele,Hidrocortisona,Dermatologia,5
+164,João,26,Rigidez,Ibuprofeno,Ortopedia,10
+165,Larissa,39,Descamação,Hidrocortisona,Dermatologia,1
+166,Pedro,44,Dor nas articulações,Ibuprofeno,Ortopedia,2
+167,Julia,33,Irritação na pele,Hidrocortisona,Dermatologia,5
+168,Carlos,83,Coceira,Cetirizina,Dermatologia,4
+169,Lucas,77,Dor no peito,Bisoprolol,Cardiologia,9
+170,Ana,48,Dor de cabeça,Clonazepam,Neurologia,8
+171,João,65,Dor no peito,Atorvastatina,Cardiologia,5
+172,Ana,65,Descamação,Hidrocortisona,Dermatologia,4
+173,Pedro,74,Dor de cabeça,Topiramato,Neurologia,7
+174,Fernanda,83,Falta de ar,Bisoprolol,Cardiologia,6
+175,Julia,1,Dificuldade para respirar,Amoxicilina,Pediatria,2
+176,Lucas,31,Irritação na pele,Cetirizina,Dermatologia,5
+177,José,20,Palpitações,Bisoprolol,Cardiologia,8
+178,Larissa,95,Descamação,Cetirizina,Dermatologia,4
+179,João,24,Coceira,Clobetasol,Dermatologia,7
+180,João,70,Falta de ar,Bisoprolol,Cardiologia,10
+181,Pedro,65,Dor de cabeça,Carbamazepina,Neurologia,3
+182,Ana,100,Inchaço,Cetoprofeno,Ortopedia,5
+183,Julia,60,Tontura,Carbamazepina,Neurologia,5
+184,Larissa,78,Palpitações,Bisoprolol,Cardiologia,2
+185,Julia,44,Dor nas articulações,Ibuprofeno,Ortopedia,10
+186,Maria,36,Coceira,Hidrocortisona,Dermatologia,1
+187,João,2,Dificuldade para respirar,Dipirona,Pediatria,7
+188,Carlos,73,Tontura,Carbamazepina,Neurologia,7
+189,Ana,56,Tontura,Carbamazepina,Neurologia,3
+190,Julia,94,Falta de ar,Aspirina,Cardiologia,6
+191,José,46,Tontura,Topiramato,Neurologia,4
+192,Fernanda,35,Falta de ar,Aspirina,Cardiologia,6
+193,Fernanda,99,Coceira,Cetirizina,Dermatologia,3
+194,Larissa,31,Dor nas articulações,Cetoprofeno,Ortopedia,4
+195,Larissa,60,Convulsões,Clonazepam,Neurologia,9
+196,Lucas,19,Convulsões,Clonazepam,Neurologia,2
+197,Larissa,81,Palpitações,Aspirina,Cardiologia,4
+198,Pedro,16,Dor nas articulações,Naproxeno,Ortopedia,2
+199,Fernanda,85,Convulsões,Topiramato,Neurologia,8
+200,Pedro,41,Irritação na pele,Hidrocortisona,Dermatologia,4

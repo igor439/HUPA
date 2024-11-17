@@ -1,7 +1,10 @@
-#include "Paciente.h"
-#include "Pagina.h"
+
 #ifndef ELEMENTOPAGINA_H
 #define ELEMENTOPAGINA_H
+
+
+#include "Paciente.h"
+#include "Pagina.h"
 
 class ElementoPagina
 {

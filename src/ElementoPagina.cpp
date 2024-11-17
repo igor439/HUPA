@@ -1,5 +1,4 @@
 #include "..\include\ElementoPagina.h"
-#include "ElementoPagina.h"
 
 int ElementoPagina::getPrioridade() const { return prioridade; }
 
