@@ -30,10 +30,7 @@ ElementoPaginaFolha * Pagina::getElemento(int indice) const
 bool Pagina::addelemento(ElementoPaginaFolha *&elemento)
 {
 
-
-
-
-    
+    ElementoPaginaFolha * novoElemento = new ElementoPaginaFolha(elemento->getPrioridade(), elemento->getProx(), elemento->getAnt(), elemento->getChave());
     
     // Verifica se ainda há espaço livre
     
@@ -41,7 +38,7 @@ bool Pagina::addelemento(ElementoPaginaFolha *&elemento)
 
         
         
-        elementos[tamanho - tamanhoLivre] = *elemento;
+        elementos[tamanho - tamanhoLivre] = *novoElemento;
         
         this->oredenarArray(tamanho + 1);
 
@@ -58,7 +55,7 @@ bool Pagina::addelemento(ElementoPaginaFolha *&elemento)
         
 
         // Insere o novo elemento na última posição disponível
-        elementos[tamanho - tamanhoLivre] = *elemento;
+        elementos[tamanho - tamanhoLivre] = *novoElemento;
         tamanhoLivre--;
         
 
@@ -92,7 +89,7 @@ void Pagina::oredenarArray(int indexOrdencao)
 
     for (int i = 0; i < indexOrdencao; ++i) {
 
-        if (indexOrdencao == 11)
+        if (indexOrdencao == 10)
         {
             std::cout << "Paciente: "<< i << std::endl;
 
@@ -106,12 +103,9 @@ void Pagina::oredenarArray(int indexOrdencao)
 
         for (int j = i + 1; j < indexOrdencao; ++j) {
 
-            
-                
 
-                
 
-            if (elementos[i].getChave()->prioridade <= elementos[j].getChave()->prioridade) { // Ordena por chave decrescente
+            if (elementos[i].getChave()->prioridade < elementos[j].getChave()->prioridade) { // Ordena por chave decrescente
                 // Troca os elementos
                 ElementoPaginaFolha temp = elementos[i];
                 elementos[i] = elementos[j];

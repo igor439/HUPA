@@ -35,6 +35,7 @@ int main() {
 
         int tam = pacientes.size();
 
+    
         for (int i = 0; i < tam; i++)
         {
 
