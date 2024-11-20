@@ -8,6 +8,7 @@ Pagina::Pagina(int tamanho, int tipo){
     this->tamanhoLivre = tamanho;
     this->tamanho = tamanho;
     this->tipo = tipo;
+    this->pagPai = nullptr;
 }
 
 Pagina::~Pagina()
@@ -52,7 +53,6 @@ bool Pagina::addelemento(ElementoPaginaFolha *&elemento)
     }
     else{
 
-        
 
         // Insere o novo elemento na última posição disponível
         elementos[tamanho - tamanhoLivre] = *novoElemento;
@@ -89,15 +89,7 @@ void Pagina::oredenarArray(int indexOrdencao)
 
     for (int i = 0; i < indexOrdencao; ++i) {
 
-        if (indexOrdencao == 10)
-        {
-            std::cout << "Paciente: "<< i << std::endl;
-
-            elementos[i].getChave()->exibirDados();
-
-            std::cout << "================================= "<< std::endl;
-
-        }
+        
         
         
 
@@ -105,7 +97,7 @@ void Pagina::oredenarArray(int indexOrdencao)
 
 
 
-            if (elementos[i].getChave()->prioridade < elementos[j].getChave()->prioridade) { // Ordena por chave decrescente
+            if (elementos[i].getPrioridade() < elementos[j].getPrioridade()) { // Ordena por chave decrescente
                 // Troca os elementos
                 ElementoPaginaFolha temp = elementos[i];
                 elementos[i] = elementos[j];
@@ -124,11 +116,19 @@ Pagina *Pagina::getProxPag()
     return this->proxPag;
 }
 
-void Pagina::setProxPag(Pagina& apontarPara) // Note o uso de & aqui
+void Pagina::setProxPag(Pagina* apontarPara) // Note o uso de & aqui
 {
-    this->proxPag = &apontarPara;
+    this->proxPag = apontarPara;
 }
 
+Pagina *Pagina::getPagPai()
+{
+    return this->pagPai;
+}
+void Pagina::setPagPai(Pagina *apontarPara)
+{
+    this->pagPai = apontarPara;
+}
 int Pagina::getElementosAdicionados()
 {
     return this->tamanho - this->tamanhoLivre;
@@ -142,50 +142,62 @@ int Pagina::getTipo()
 ElementoPaginaFolha *Pagina::buscarPorPrioridade(int prioridade)
 {
 
-   for (int i = 0; i < tamanho - tamanhoLivre; ++i) { // Itera pelos elementos adicionados
-        if (elementos[i].getPrioridade() == prioridade) {
-            return &elementos[i]; // Retorna o endereço do elemento encontrado
-        }
-        else if(elementos[i].getPrioridade() > prioridade){
+   for (int i = 0; i < tamanho - tamanhoLivre; i++)
+   {
+        if (prioridade < elementos[i].getPrioridade())
+        {
             return &elementos[i];
         }
-    }
-    return  &elementos[tamanho]; // Retorna nullptr se não encontrar
+        
+   }
+
+   
+    return  &elementos[tamanho - tamanhoLivre - 1]; 
 }
 
 bool Pagina::addelementoIndice(ElementoPagina *&elemento)
 {
 
-    
+    ElementoPaginaFolha * novoElemento = new ElementoPaginaFolha(elemento->getPrioridade(), elemento->getProx(), elemento->getAnt(), nullptr);
     
     // Verifica se ainda há espaço livre
-    
+     std::cout<<tamanho - tamanhoLivre<<std::endl;
     if (tamanhoLivre <= 0) {
+
         
-        elementos[tamanho - tamanhoLivre] = *dynamic_cast<ElementoPaginaFolha*>(elemento);
         
+        elementos[tamanho - tamanhoLivre] = *novoElemento;
         
-        this->oredenarArray(tamanho);
+        this->oredenarArray(tamanho + 1);
 
         int meio = tamanho / 2;
 
         elemento = &elementos[meio];
 
+       
 
         
         return false;
     }
+    else{
 
-    // Insere o novo elemento na última posição disponível
-    elementos[tamanho - tamanhoLivre - 1] = *dynamic_cast<ElementoPaginaFolha*>(elemento);
-    tamanhoLivre--;
-    
+        
+
+        // Insere o novo elemento na última posição disponível
+        
+        elementos[tamanho - tamanhoLivre] = *novoElemento;
+        tamanhoLivre--;
+        
+        
 
 
+        this->oredenarArray(tamanho - tamanhoLivre);
 
-    this->oredenarArray(tamanho - tamanhoLivre - 1);
+        return true;
 
-    return true;
+
+    }
+
 }
 
 Pagina* Pagina::split() {
@@ -202,13 +214,30 @@ Pagina* Pagina::split() {
     }
 
     // Atualiza a página original para remover os elementos da segunda metade
-    tamanhoLivre += (tamanho - meio);  // Aumenta o espaço livre, pois os elementos foram movidos para a nova página
+     
 
     // Limpa os elementos que foram movidos para a nova página
-    for (int i = meio; i < tamanho; ++i) {
+    for (int i = meio; i < tamanho + 1 - tamanhoLivre; ++i) {
         elementos[i] = ElementoPaginaFolha();  // Deleta os elementos que foram movidos
     }
 
+    tamanhoLivre = (tamanho - meio); 
+
+   // novaPagina->exibirChaves();
+
+
     // Retorna a nova página
     return novaPagina;
+}
+
+void Pagina::exibirChaves()
+{
+
+    int tam  = tamanho - tamanhoLivre;
+
+    for (int i = 0; i < tam; i++)
+    {
+        elementos[i].getChave()->exibirDados();
+    }
+    
 }

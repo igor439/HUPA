@@ -14,6 +14,7 @@ class Pagina
 
     ElementoPaginaFolha * elementos;
     Pagina * proxPag;
+    Pagina * pagPai;
     int tamanho;
     int tamanhoLivre;
     int  tipo; // 0 para folha e 1 para nó com filhos
@@ -48,7 +49,12 @@ class Pagina
 
     Pagina * getProxPag();
 
-    void setProxPag(Pagina& apontarPara);
+    void setProxPag(Pagina *apontarPara);
+
+
+    Pagina * getPagPai();
+
+    void setPagPai(Pagina* apontarPara);
 
     int getElementosAdicionados();
 
@@ -59,7 +65,10 @@ class Pagina
     bool addelementoIndice(ElementoPagina *&elemento);
 
     Pagina* split();
-     
+
+
+
+  void exibirChaves();
 };
 
 

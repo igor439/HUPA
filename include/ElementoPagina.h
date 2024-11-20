@@ -29,6 +29,7 @@ ElementoPagina(int prioridade = 0, Pagina* prox = nullptr, Pagina* ant = nullptr
     void setPrioridade(int prioridade);
     void setProx(Pagina* prox);
     void setAnt(Pagina* ant);
+    
 
     virtual ~ElementoPagina();
     
