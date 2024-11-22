@@ -9,7 +9,6 @@ std::string gerarNomeAleatorio() {
     return nomes[rand() % nomes.size()];
 }
 
-
 std::vector<std::vector<std::string>> sintomasPorEspecialidade = {
     {"Dor no peito", "Falta de ar", "Palpitações"},             // Cardiologia
     {"Dor de cabeça", "Convulsões", "Tontura"},                 // Neurologia
@@ -19,7 +18,6 @@ std::vector<std::vector<std::string>> sintomasPorEspecialidade = {
 };
 
 std::string gerarSintomasAleatorios(std::string especialidade) {
-
 
     int indexEspecialidade = 0;
     if (especialidade == "Cardiologia") {
@@ -32,9 +30,7 @@ std::string gerarSintomasAleatorios(std::string especialidade) {
         indexEspecialidade = 3;
     } else if (especialidade == "Dermatologia") {
         indexEspecialidade = 4;
-    }
-    
-
+    }   
     
     if (indexEspecialidade < 0 || indexEspecialidade >= static_cast<int>(sintomasPorEspecialidade.size())) {
     return "Especialidade inválida";
@@ -43,8 +39,6 @@ std::string gerarSintomasAleatorios(std::string especialidade) {
     return sintomas[rand() % sintomas.size()];
 }
 
-
-
 std::vector<std::vector<std::string>> medicamentosPorEspecialidade = {
     {"Aspirina", "Atorvastatina", "Bisoprolol"},                // Cardiologia
     {"Carbamazepina", "Clonazepam", "Topiramato"},              // Neurologia
@@ -52,9 +46,6 @@ std::vector<std::vector<std::string>> medicamentosPorEspecialidade = {
     {"Paracetamol", "Amoxicilina", "Dipirona"},                 // Pediatria
     {"Hidrocortisona", "Cetirizina", "Clobetasol"}              // Dermatologia
 };
-
-
-
 
 std::string gerarMedicamentosAleatorios(const std::string& especialidade) {
     int indexEspecialidade = 0;
@@ -79,13 +70,10 @@ std::string gerarEspecialidadeAleatoria(int idade) {
     int index = rand() % especialidades.size();
 
     if(idade > 13){
-
         while (index == 3)
         {
             index = rand() % especialidades.size();
-        }
-        
-
+        }       
     }
     return especialidades[index];
 }

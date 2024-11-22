@@ -1,14 +1,9 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
-
-
-
-
 #include <iostream>
 #include <vector>
 #include "..\include\Paciente.h"
-
 #include <fstream>
 #include <vector>
 
@@ -22,6 +17,5 @@ public:
 
     // Outros métodos do Hospital...
 };
-
 
 #endif

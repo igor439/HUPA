@@ -14,7 +14,6 @@ public:
     int prioridade;
     std::string especialidade;
     
-
     // Construtor
     Paciente(int id, const std::string& nome, int idade, 
              const std::string& sintomas, const std::string& medicamentos, 
@@ -23,9 +22,6 @@ public:
     // Método para exibir dados
     void exibirDados() const;
 
-     std::string toCSV() const;
-
-    
+     std::string toCSV() const;    
 };
-
 #endif

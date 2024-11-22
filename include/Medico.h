@@ -16,5 +16,4 @@ public:
     // Método para exibir os dados do médico
     void exibirDados() const;
 };
-
 #endif

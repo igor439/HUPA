@@ -13,7 +13,6 @@ void Especialidade::adicionarMedico(const Medico& medico) {
     medicos.push_back(medico);
 }
 
-
 // Exibe os dados de todos os médicos na especialidade
 void Especialidade::exibirMedicos() const {
     std::cout << "Especialidade: " << nome << "\nMédicos:\n";
@@ -48,7 +47,6 @@ std::vector<Paciente> Especialidade::carregarPacientesDoCSV(const std::string &n
         int prioridade;
         std::string especialidade;
 
-
         // Extrai cada campo do CSV
         std::getline(ss, campo, ',');
         id = std::stoi(campo);
@@ -67,22 +65,15 @@ std::vector<Paciente> Especialidade::carregarPacientesDoCSV(const std::string &n
         std::getline(ss, campo, ',');
         prioridade = std::stoi(campo);
  
-
- 
         if(especialidade == this->nome)
         {
-
             // Cria um objeto Paciente e adiciona ao vetor
             Paciente paciente(id, nome, idade, sintomas, medicamentos, prioridade, especialidade);
             pacientes.push_back(paciente);
-
-        }
-
-        
+        }        
     }
 
     arquivo.close();
     return pacientes;
 }
 // Exibe os sintomas tratados pela especialidade e os medicamentos recomendados para cada sintoma
-

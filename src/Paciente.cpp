@@ -1,7 +1,6 @@
 #include "..\include\Paciente.h"
 #include <iostream>
 
-
 // Definição do construtor
 Paciente::Paciente(int id, const std::string& nome, int idade, 
                    const std::string& sintomas, const std::string& medicamentos, 
@@ -26,4 +25,3 @@ std::string Paciente::toCSV() const {
            sintomas + "," + medicamentos + "," + especialidade + "," + 
            std::to_string(prioridade);
 }
-

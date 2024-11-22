@@ -16,9 +16,7 @@ public:
     Especialidade(const std::string& nome);
 
     // Adiciona um médico à especialidade
-    void adicionarMedico(const Medico& medico);
-
-   
+    void adicionarMedico(const Medico& medico);   
 
     // Exibe informações sobre a especialidade, médicos e sintomas tratados
     void exibirMedicos() const;
@@ -26,5 +24,4 @@ public:
     std::vector<Paciente> carregarPacientesDoCSV(const std::string& nomeArquivo);
 
 };
-
 #endif

@@ -21,5 +21,4 @@ class ElementoPaginaFolha : public ElementoPagina
         // Setter para chave
         void setChave(Paciente* novaChave);
 };
-
 #endif

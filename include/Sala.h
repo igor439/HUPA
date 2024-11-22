@@ -19,5 +19,4 @@ public:
     // Exibe o estado atual da sala
     void exibirStatus() const;
 };
-
 #endif
