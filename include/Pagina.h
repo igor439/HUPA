@@ -11,6 +11,7 @@ class Pagina
 
     ElementoPaginaFolha * elementos;
     Pagina * proxPag;
+    Pagina * antPag;
     Pagina * pagPai;
     int tamanho;
     int tamanhoLivre;
@@ -43,6 +44,11 @@ class Pagina
 
     void setProxPag(Pagina *apontarPara);
 
+
+    Pagina * getAntPag();
+
+    void setAntPag(Pagina *apontarPara);
+
     Pagina * getPagPai();
 
     void setPagPai(Pagina* apontarPara);
@@ -57,5 +63,7 @@ class Pagina
     Pagina* split();
 
   void exibirChaves();
+
+  void migrarPai();
 };
 #endif

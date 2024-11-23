@@ -8,46 +8,51 @@
 #include "..\include\ElementoPagina.h" // Inclui a classe ElementoPagina para elementos de índice na árvore B+.
 #include <algorithm>  // Para usar std::swap
 
-// Função auxiliar para ajustar o heap
+// Função auxiliar para ajustar o heap máximo
 void ajusteHeap(std::vector<Paciente>& vec, int n, int i) {
-    int maior = i;  // Maior elemento como a raiz
+    int maior = i;  // Inicialmente, a raiz é o maior
     int esquerda = 2 * i + 1;  // Filho à esquerda
     int direita = 2 * i + 2;  // Filho à direita
 
-    // Se o filho à esquerda for maior que a raiz
+    // Verifica se o filho à esquerda é maior que a raiz
     if (esquerda < n && vec[esquerda].prioridade > vec[maior].prioridade)
         maior = esquerda;
 
-    // Se o filho à direita for maior que o maior até agora
+    // Verifica se o filho à direita é maior que o maior até agora
     if (direita < n && vec[direita].prioridade > vec[maior].prioridade)
         maior = direita;
 
     // Se o maior não for a raiz
     if (maior != i) {
-        std::swap(vec[i], vec[maior]); // Usada para trocar os valores de duas variáveis.
+        std::swap(vec[i], vec[maior]); // Troca a raiz com o maior
 
-        // Recursivamente, ajusta o sub-heap afetado
+        // Ajusta recursivamente o sub-heap afetado
         ajusteHeap(vec, n, maior);
     }
 }
 
-// Função para ordenar o vetor de pacientes usando heapsort
+// Função para ordenar o vetor usando heapsort em ordem decrescente
 void ordenaHeap(std::vector<Paciente>& pacientes) {
     int n = pacientes.size();
 
-    // Constrói o heap (reorganiza o vetor)
+    // Constrói o heap máximo (reorganiza o vetor)
     for (int i = n / 2 - 1; i >= 0; i--)
         ajusteHeap(pacientes, n, i);
 
-    // Extrai um elemento do heap de cada vez
+    // Extrai o maior elemento do heap de cada vez
     for (int i = n - 1; i > 0; i--) {
-        // Move a raiz atual para o final
+        // Move o maior (raiz) para o final
         std::swap(pacientes[0], pacientes[i]);
 
-        // Chama ajusteHeap no heap reduzido
+        // Ajusta o heap reduzido para manter a propriedade de heap máximo
         ajusteHeap(pacientes, i, 0);
     }
+
+    // Como o heapsort padrão gera ordem crescente, invertendo aqui,
+    // obteremos a ordem decrescente.
+    std::reverse(pacientes.begin(), pacientes.end());
 }
+
 
 int main() {
     int tamanhoPagina = 10; // Define o tamanho máximo permitido para uma página na árvore B+.
@@ -56,7 +61,7 @@ int main() {
     
     Controller controller; // Cria uma instância da classe Controller.
     
-    controller.exportarPacientesCSV(nomeArquivo); // Exporta os dados dos pacientes para o arquivo CSV especificado.
+    //controller.exportarPacientesCSV(nomeArquivo); // Exporta os dados dos pacientes para o arquivo CSV especificado.
     
     Especialidade especialidade = Especialidade("Cardiologia"); // Cria uma especialidade médica chamada "Cardiologia".
     
@@ -82,14 +87,18 @@ int main() {
         for (int i = 0; i < tam; i++) { // Loop para inserir todos os pacientes na árvore B+.
             
             while (raiz->getTipo() != 0) { // Navega pela árvore até alcançar uma folha.
-                
                 ElementoPagina* elementoDecida = raiz->buscarPorPrioridade(pacientes[i].prioridade); // Busca o índice apropriado com base na prioridade.
                 
-                if (elementoDecida->getPrioridade() <= pacientes[i].prioridade) {
+                if (elementoDecida->getPrioridade() < pacientes[i].prioridade) {
+
+                    std::cout << "Esquerda: "<< elementoDecida->getPrioridade()<< " " <<   pacientes[i].prioridade << std::endl;
                     raiz = elementoDecida->getAnt(); // Vai para o ramo à esquerda.
                 } else {
                     raiz = elementoDecida->getProx(); // Vai para o ramo à direita.
+                    std::cout << "Direita: "<< elementoDecida->getPrioridade()<< " " <<   pacientes[i].prioridade << std::endl;
+
                 }
+                
             }
 
             ElementoPaginaFolha* novoElemento = new ElementoPaginaFolha( // Cria um novo elemento folha para o paciente.
@@ -101,63 +110,73 @@ int main() {
             } else { // Se a página estiver cheia, realiza uma cisão (split).
                 std::cout << "Página cheia! Cisão necessária." << std::endl;
 
-                Pagina* novaPaginaFolha = raiz->split(); // Divide a página em duas.
-                
-                Pagina* pagPai = raiz->getPagPai(); // Obtém a página pai.
+                Pagina * novaPagina = raiz->split();
 
-                novaPaginaFolha->setProxPag(raiz->getProxPag()); // Atualiza o ponteiro da próxima página da nova folha.
-                
-                raiz->setProxPag(novaPaginaFolha); // Atualiza o ponteiro da próxima página na página atual.
-
-                if (pagPai == nullptr) { // Se não houver uma página pai, cria uma nova raiz.
-                    
-                    Pagina* navaPaginaIndices = new Pagina(tamanhoPagina, 1); // Cria uma nova página de índice.
-                    
-                    ElementoPagina* elementoMeio = novoElemento; // O elemento do meio se torna o índice.
-                    
-                    elementoMeio->setProx(novaPaginaFolha); // Configura o próximo elemento para a nova folha.
-                    
-                    elementoMeio->setAnt(raiz); // Configura o elemento anterior para a raiz.
-                   
-                    novaPaginaFolha->setPagPai(navaPaginaIndices); // Atualiza o pai da nova folha.
-                    
-                    raiz->setPagPai(navaPaginaIndices); // Atualiza o pai da raiz.
-                    
-                    navaPaginaIndices->addelementoIndice(elementoMeio); // Adiciona o índice à nova raiz.
-                                   
-                    raizAncora = navaPaginaIndices; // Atualiza a referência para a nova raiz.
-                } else { // Se houver uma página pai.
-                    ElementoPagina* elementoMeio = novoElemento; // Configura o elemento do meio como índice.
-                    
-                    elementoMeio->setProx(novaPaginaFolha); // Define o próximo como a nova folha.
-                    
-                    elementoMeio->setAnt(raiz); // Define o anterior como a página atual.
-
-                    while (!pagPai->addelementoIndice(elementoMeio)) { // Continua tentando adicionar o índice na página pai.
-                        
-                        Pagina* splitPagPai = pagPai->split(); // Divide a página pai.
-                        
-                        Pagina* avo = pagPai->getPagPai(); // Obtém o "avô" da página atual.
-
-                        elementoMeio->setProx(splitPagPai); // Configura o próximo como a página dividida.
-                        elementoMeio->setAnt(pagPai); // Configura o anterior como a página original.
-
-                        if (avo == nullptr) { // Se não houver um avô, cria uma nova raiz.
-                            Pagina* navaPaginaIndices = new Pagina(tamanhoPagina, 1); // Nova raiz.
-                            
-                            pagPai->setPagPai(navaPaginaIndices); // Atualiza o pai da página original.
-                            
-                            splitPagPai->setPagPai(navaPaginaIndices); // Atualiza o pai da página dividida.
-                                                       
-                            pagPai = navaPaginaIndices; // Atualiza a referência para a nova raiz.
-                        } else {
-                            pagPai = avo; // Continua subindo na árvore.
-                        }
-                    }
-                    raizAncora = pagPai; // Atualiza a referência para a raiz da árvore.
+                if (raiz->getProxPag())
+                {
+                    novaPagina->setProxPag(raiz->getProxPag());
                 }
+                
+
+                raiz->setProxPag(novaPagina);
+
+                Pagina * pagPai = raiz->getPagPai();
+
+                if (pagPai ==  nullptr)
+                {
+                    Pagina * novaPagIndices = new Pagina(tamanhoPagina, 1);
+
+                    ElementoPagina * novoElementoIndice = new ElementoPagina(novaPagina->getElementos()[0].getPrioridade(),novaPagina,raiz);
+
+                    novaPagina->setPagPai(novaPagIndices);
+                    raiz->setPagPai(novaPagIndices);
+
+                    novaPagIndices->addelementoIndice(novoElementoIndice);
+
+                    raizAncora = novaPagIndices;
+                    
+                }
+                else
+                {
+
+                    
+
+                    ElementoPagina * novoElementoIndice = new ElementoPagina(novaPagina->getElementos()[0].getPrioridade(),novaPagina,raiz);
+
+                    while (!pagPai->addelementoIndice(novoElementoIndice))
+                    {
+
+                        // o fluxo é bom, mas a subida tem que ser pensada
+                        Pagina * novaPagIndices = pagPai->split();
+
+                        novaPagIndices->migrarPai();
+
+
+
+                        ElementoPagina * novoElementoIndice = new ElementoPagina(novaPagIndices->getElementos()[0].getPrioridade(),novaPagIndices,pagPai);
+
+
+                        Pagina * novaRaizSupArvore = new Pagina(tamanhoPagina,1);
+
+                        novaRaizSupArvore->addelementoIndice(novoElementoIndice);
+
+                        raizAncora = novaRaizSupArvore;
+
+
+
+                        
+                    }
+                    
+
+
+
+                }
+                
+                
+
             }
-            raiz = raizAncora; // Retorna para a raiz após cada inserção.
+            
+            raiz = raizAncora;
         }
 
         
@@ -170,6 +189,15 @@ int main() {
             Pagina* aux = auxdisplay->getProxPag(); // Obtém a próxima página.
             auxdisplay->exibirChaves(); // Exibe as chaves da página atual.
             auxdisplay = aux; // Atualiza o ponteiro auxiliar para a próxima página.
+        }
+        
+        if (auxdisplay->getProxPag() == nullptr)
+        {
+            count++;
+            std::cout << "++++++++++++++++++++++++++++" << std::endl;
+            std::cout << "PAGINA: " << count << " tamanho: " << auxdisplay->getTamanho() - auxdisplay->getTamanhoLivre() << std::endl;
+            std::cout << "++++++++++++++++++++++++++++" << std::endl;
+            auxdisplay->exibirChaves();
         }
         
 
