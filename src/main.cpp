@@ -54,14 +54,52 @@ void ordenaHeap(std::vector<Paciente>& pacientes) {
 }
 
 
+int tamanhoPagina = 10;
+
+Pagina * AdcionarNaArvore(Pagina * pagPai, ElementoPagina *novoElementoIndice){
+
+    if (!pagPai->addelementoIndice(novoElementoIndice))
+    {
+        Pagina * novaPagIndices = pagPai->split();
+
+        novaPagIndices->migrarPai();
+
+        ElementoPagina * novoElemento = new ElementoPagina(novaPagIndices->getElementos()[0].getPrioridade(),novaPagIndices,pagPai);
+
+        if (pagPai->getPagPai())
+        {
+            pagPai = AdcionarNaArvore(pagPai->getPagPai(),novoElemento);
+        }
+        else
+        {
+            Pagina * novaRaiz = new Pagina(tamanhoPagina,1);
+
+            novaRaiz->addelementoIndice(novoElemento);
+
+            return novaRaiz;
+
+        }
+
+        
+        
+
+
+    }
+
+    return pagPai;
+    
+
+}
+
+
 int main() {
-    int tamanhoPagina = 10; // Define o tamanho máximo permitido para uma página na árvore B+.
+     // Define o tamanho máximo permitido para uma página na árvore B+.
     
     std::string nomeArquivo = "pacientes.csv"; // Nome do arquivo CSV para armazenar os dados dos pacientes.
     
     Controller controller; // Cria uma instância da classe Controller.
     
-    //controller.exportarPacientesCSV(nomeArquivo); // Exporta os dados dos pacientes para o arquivo CSV especificado.
+    controller.exportarPacientesCSV(nomeArquivo); // Exporta os dados dos pacientes para o arquivo CSV especificado.
     
     Especialidade especialidade = Especialidade("Cardiologia"); // Cria uma especialidade médica chamada "Cardiologia".
     
@@ -81,6 +119,12 @@ int main() {
         Pagina* auxdisplay = raiz; // Variável auxiliar para exibir as páginas.
         
         int tam = pacientes.size(); // Armazena o número de pacientes carregados.
+
+        std::cout << "==============================" << std::endl;
+        std::cout << "==============================" << std::endl;
+        std::cout << tam << std::endl;
+        std::cout << "==============================" << std::endl;
+        std::cout << "==============================" << std::endl;
         
         Pagina* raizAncora = raiz; // Mantém uma referência fixa para a raiz da árvore.
 
@@ -110,14 +154,15 @@ int main() {
             } else { // Se a página estiver cheia, realiza uma cisão (split).
                 std::cout << "Página cheia! Cisão necessária." << std::endl;
 
+             
                 Pagina * novaPagina = raiz->split();
 
                 if (raiz->getProxPag())
                 {
                     novaPagina->setProxPag(raiz->getProxPag());
                 }
-                
 
+            
                 raiz->setProxPag(novaPagina);
 
                 Pagina * pagPai = raiz->getPagPai();
@@ -143,30 +188,7 @@ int main() {
 
                     ElementoPagina * novoElementoIndice = new ElementoPagina(novaPagina->getElementos()[0].getPrioridade(),novaPagina,raiz);
 
-                    while (!pagPai->addelementoIndice(novoElementoIndice))
-                    {
-
-                        // o fluxo é bom, mas a subida tem que ser pensada
-                        Pagina * novaPagIndices = pagPai->split();
-
-                        novaPagIndices->migrarPai();
-
-
-
-                        ElementoPagina * novoElementoIndice = new ElementoPagina(novaPagIndices->getElementos()[0].getPrioridade(),novaPagIndices,pagPai);
-
-
-                        Pagina * novaRaizSupArvore = new Pagina(tamanhoPagina,1);
-
-                        novaRaizSupArvore->addelementoIndice(novoElementoIndice);
-
-                        raizAncora = novaRaizSupArvore;
-
-
-
-                        
-                    }
-                    
+                    raizAncora =  AdcionarNaArvore(pagPai, novoElementoIndice);
 
 
 

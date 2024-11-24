@@ -147,7 +147,10 @@ Pagina* Pagina::split() {
     if (this->getTipo() == 0)
     {
 
-        ElementoPaginaFolha *novoElemento = &elementos[tamanho];
+        ElementoPaginaFolha *novoElemento = new ElementoPaginaFolha(elementos[tamanho].getPrioridade(),elementos[tamanho].getProx(), elementos[tamanho].getAnt(), elementos[tamanho].getChave() );
+
+        std::cout<< "INDEX: "<< tamanho << std::endl;
+        novoElemento->getChave()->exibirDados();
         elementos[tamanho] = ElementoPaginaFolha(); 
         novaPagina->addelemento(novoElemento); 
         tamanhoLivre = 0;
@@ -156,7 +159,7 @@ Pagina* Pagina::split() {
     }
     else{
 
-        ElementoPagina *novoElemento = &elementos[tamanho];
+        ElementoPagina *novoElemento = new ElementoPagina(elementos[tamanho].getPrioridade(),elementos[tamanho].getProx(), elementos[tamanho].getAnt());
         elementos[tamanho] = ElementoPaginaFolha(); 
         novaPagina->addelementoIndice(novoElemento); 
         tamanhoLivre = 0;
@@ -173,7 +176,12 @@ void Pagina::exibirChaves() {
     for (int i = 0; i < tam; i++) {
         if (elementos[i].getChave())
         {
+
+            
+            //std::cout << " ==============INDEX:" << i <<" =================================" << std::endl;
             elementos[i].getChave()->exibirDados(); // Exibe os dados associados à chave
+            //std::cout << " ===============================================" << std::endl;
+            
         }
         
         

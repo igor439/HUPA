@@ -2,5 +2,10 @@
 #include "../include/Paciente.h"
 #include "../include/Pagina.h"
 
-Paciente *ElementoPaginaFolha::getChave() const{ return chave; }
-void ElementoPaginaFolha::setChave(Paciente *novaChave){ chave = novaChave; }
+
+void ElementoPaginaFolha::setChave(Paciente *novaChave) { chave = novaChave; }
+
+Paciente *ElementoPaginaFolha::getChave() const
+{
+    return this->chave;
+}
