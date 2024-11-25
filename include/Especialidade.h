@@ -23,5 +23,7 @@ public:
 
     std::vector<Paciente> carregarPacientesDoCSV(const std::string& nomeArquivo);
 
+    std::vector<Medico> carregarMedicosDoCSV(const std::string &nomeArquivo);
+
 };
 #endif

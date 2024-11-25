@@ -76,4 +76,46 @@ std::vector<Paciente> Especialidade::carregarPacientesDoCSV(const std::string &n
     arquivo.close();
     return pacientes;
 }
-// Exibe os sintomas tratados pela especialidade e os medicamentos recomendados para cada sintoma
+
+
+// Função para carregar médicos de um arquivo CSV
+std::vector<Medico> Especialidade::carregarMedicosDoCSV(const std::string &nomeArquivo)
+{
+    std::vector<Medico> medicos;
+    std::ifstream arquivo(nomeArquivo);
+
+    if (!arquivo.is_open()) {
+        std::cerr << "Erro ao abrir o arquivo " << nomeArquivo << std::endl;
+        return medicos;
+    }
+
+    std::string linha;
+    std::getline(arquivo, linha); // Pula o cabeçalho
+
+    while (std::getline(arquivo, linha)) {
+        std::stringstream ss(linha);
+        std::string campo;
+
+        int id;
+        std::string nome;
+        std::string especialidade;
+
+        // Extrai cada campo do CSV
+        std::getline(ss, campo, ',');
+        id = std::stoi(campo); // Converte o ID de string para inteiro
+
+        std::getline(ss, nome, ','); // Lê o nome do médico
+
+        std::getline(ss, especialidade, ','); // Lê a especialidade do médico
+
+        // Verifica se a especialidade do médico corresponde à especialidade atual
+        if (especialidade == this->nome) {
+            // Cria um objeto Medico e adiciona ao vetor
+            Medico medico(id, nome, especialidade);
+            medicos.push_back(medico);
+        }
+    }
+
+    arquivo.close();
+    return medicos;
+}

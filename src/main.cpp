@@ -54,7 +54,7 @@ void ordenaHeap(std::vector<Paciente>& pacientes) {
 }
 
 
-int tamanhoPagina = 10;
+int tamanhoPagina = 8;
 
 Pagina * AdcionarNaArvore(Pagina * pagPai, ElementoPagina *novoElementoIndice){
 
@@ -99,12 +99,16 @@ int main() {
     
     Controller controller; // Cria uma instância da classe Controller.
     
-    controller.exportarPacientesCSV(nomeArquivo); // Exporta os dados dos pacientes para o arquivo CSV especificado.
-    
+    controller.exportarPacientesCSV(nomeArquivo,200); // Exporta os dados dos pacientes para o arquivo CSV especificado.
+    controller.gerarMedicosAleatorios("medicos.csv", 10);
+    controller.dividirSalasPorEspecialidade("especialidades.csv",10);
+
     Especialidade especialidade = Especialidade("Cardiologia"); // Cria uma especialidade médica chamada "Cardiologia".
     
     std::vector<Paciente> pacientes = especialidade.carregarPacientesDoCSV(nomeArquivo); // Carrega os dados dos pacientes a partir do arquivo CSV.
-    
+    std::vector<Medico> medicos = especialidade.carregarMedicosDoCSV("medicos.csv");
+
+
     // Ordena os pacientes por prioridade usando heapsort
     ordenaHeap(pacientes);
 
@@ -221,9 +225,11 @@ int main() {
             std::cout << "++++++++++++++++++++++++++++" << std::endl;
             auxdisplay->exibirChaves();
         }
+
+        
         
 
-        // AS PAGINAS ESTAM COM TAMANHO 6, INVESTIGAR AMANHÃ
+        
     }
 }
 

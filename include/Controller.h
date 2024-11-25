@@ -3,7 +3,9 @@
 
 #include <iostream>
 #include <vector>
-#include "..\include\Paciente.h"
+#include "Paciente.h"
+#include "Medico.h"
+
 #include <fstream>
 #include <vector>
 
@@ -13,9 +15,9 @@ public:
     std::vector<Paciente> pacientes;
 
     // Função para exportar a lista de pacientes para um arquivo CSV
-    void exportarPacientesCSV(const std::string& nomeArquivo) const ;
-
-    // Outros métodos do Hospital...
+    void exportarPacientesCSV(const std::string& nomeArquivo, int numeroPacienetes) const ;
+    void gerarMedicosAleatorios(const std::string& nomeArquivo, int numeroMedicos) const;
+    void dividirSalasPorEspecialidade(const std::string& nomeArquivo, int numeroSalas) const;
 };
 
 #endif

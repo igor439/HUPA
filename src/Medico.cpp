@@ -5,7 +5,32 @@
 Medico::Medico(int id, const std::string& nome, const std::string& especialidade)
     : id(id), nome(nome), especialidade(especialidade) {}
 
+Medico::Medico()
+{
+}
+
 // Exibe as informações do médico
 void Medico::exibirDados() const {
     std::cout << "ID do Médico: " << id << ", Nome: " << nome << ", Especialidade: " << especialidade << "\n";
 }
+int Medico::getId() const {
+    return this->id;
+}
+
+std::string Medico::getNome() const {
+    return this->nome;
+}
+
+std::string Medico::getEspecialidade() const {
+    return this->especialidade;
+}
+
+int Medico::getHorastrabalhadas() const {
+    return this->horasTrabalhadas;
+}
+
+void Medico::atendimentoCompleto() {
+    this->horasTrabalhadas++;
+}
+
+
