@@ -1,0 +1,245 @@
+====================== SEMANA: 1 ======================
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) José
+Identificação: 7
+Especialidade: Dermatologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Carlos
+Identificação: 2
+Especialidade: Dermatologia
+Horario: 8:00 h
+================================================================= 
+Nome: Julia
+Identificação: 139
+Especialidade: Dermatologia
+Horario: 9:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 47
+Especialidade: Dermatologia
+Horario: 10:00 h
+================================================================= 
+Nome: Ana
+Identificação: 152
+Especialidade: Dermatologia
+Horario: 11:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 161
+Especialidade: Dermatologia
+Horario: 12:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 50
+Especialidade: Dermatologia
+Horario: 13:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 110
+Especialidade: Dermatologia
+Horario: 14:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 130
+Especialidade: Dermatologia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) José
+Identificação: 7
+Especialidade: Dermatologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Lucas
+Identificação: 92
+Especialidade: Dermatologia
+Horario: 8:00 h
+================================================================= 
+Nome: Ana
+Identificação: 43
+Especialidade: Dermatologia
+Horario: 9:00 h
+================================================================= 
+Nome: Maria
+Identificação: 129
+Especialidade: Dermatologia
+Horario: 10:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 15
+Especialidade: Dermatologia
+Horario: 11:00 h
+================================================================= 
+Nome: Maria
+Identificação: 79
+Especialidade: Dermatologia
+Horario: 12:00 h
+================================================================= 
+Nome: Lucas
+Identificação: 20
+Especialidade: Dermatologia
+Horario: 13:00 h
+================================================================= 
+Nome: João
+Identificação: 179
+Especialidade: Dermatologia
+Horario: 14:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 143
+Especialidade: Dermatologia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) José
+Identificação: 7
+Especialidade: Dermatologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Carlos
+Identificação: 156
+Especialidade: Dermatologia
+Horario: 8:00 h
+================================================================= 
+Nome: José
+Identificação: 107
+Especialidade: Dermatologia
+Horario: 9:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 55
+Especialidade: Dermatologia
+Horario: 10:00 h
+================================================================= 
+Nome: Julia
+Identificação: 140
+Especialidade: Dermatologia
+Horario: 11:00 h
+================================================================= 
+Nome: Julia
+Identificação: 163
+Especialidade: Dermatologia
+Horario: 12:00 h
+================================================================= 
+Nome: Julia
+Identificação: 167
+Especialidade: Dermatologia
+Horario: 13:00 h
+================================================================= 
+Nome: Lucas
+Identificação: 176
+Especialidade: Dermatologia
+Horario: 14:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 70
+Especialidade: Dermatologia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) José
+Identificação: 7
+Especialidade: Dermatologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: João
+Identificação: 44
+Especialidade: Dermatologia
+Horario: 8:00 h
+================================================================= 
+Nome: João
+Identificação: 85
+Especialidade: Dermatologia
+Horario: 9:00 h
+================================================================= 
+Nome: Ana
+Identificação: 127
+Especialidade: Dermatologia
+Horario: 10:00 h
+================================================================= 
+Nome: José
+Identificação: 74
+Especialidade: Dermatologia
+Horario: 11:00 h
+================================================================= 
+Nome: Carlos
+Identificação: 168
+Especialidade: Dermatologia
+Horario: 12:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 200
+Especialidade: Dermatologia
+Horario: 13:00 h
+================================================================= 
+Nome: Julia
+Identificação: 126
+Especialidade: Dermatologia
+Horario: 14:00 h
+================================================================= 
+Nome: Maria
+Identificação: 108
+Especialidade: Dermatologia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) José
+Identificação: 7
+Especialidade: Dermatologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Ana
+Identificação: 172
+Especialidade: Dermatologia
+Horario: 8:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 178
+Especialidade: Dermatologia
+Horario: 9:00 h
+================================================================= 
+Nome: Lucas
+Identificação: 87
+Especialidade: Dermatologia
+Horario: 10:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 193
+Especialidade: Dermatologia
+Horario: 11:00 h
+================================================================= 
+Nome: José
+Identificação: 61
+Especialidade: Dermatologia
+Horario: 12:00 h
+================================================================= 
+Nome: José
+Identificação: 114
+Especialidade: Dermatologia
+Horario: 13:00 h
+================================================================= 
+Nome: João
+Identificação: 144
+Especialidade: Dermatologia
+Horario: 14:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 165
+Especialidade: Dermatologia
+Horario: 15:00 h
+================================================================= 
+====================== Relatório Horas Trabalhadas: ====================== 
+Nome: Dr(a) José
+Identificação: 7
+Especialidade: Dermatologia
+Horas Trabalhadas: 40
+================================================================= 
+
+
+====================== NÚMERO DE SEMANAS NESCESSÁRIAS: 1 ====================== 

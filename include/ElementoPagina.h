@@ -9,6 +9,7 @@ class ElementoPagina
 {
 private:
     int  prioridade;
+    int numeroPaginasAssociadas;
     Pagina * prox;
     Pagina *ant;  
 
@@ -19,6 +20,7 @@ ElementoPagina(int prioridade = 0, Pagina* prox = nullptr, Pagina* ant = nullptr
 
     // Getters
     int getPrioridade() const ;
+    
     Pagina* getProx() const ;
     Pagina* getAnt() const ;
     

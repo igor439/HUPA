@@ -13,6 +13,7 @@ class Pagina
     Pagina * proxPag;
     Pagina * antPag;
     Pagina * pagPai;
+    int numeroPaginasAssociadas;
     int tamanho;
     int tamanhoLivre;
     int  tipo; // 0 para folha e 1 para nó com filhos
@@ -65,5 +66,9 @@ class Pagina
   void exibirChaves();
 
   void migrarPai();
+
+  void setNumeroPaginasAssociadas(int num);
+
+  int getNumeroPaginasAssociadas() const ;
 };
 #endif

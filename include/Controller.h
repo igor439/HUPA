@@ -16,8 +16,12 @@ public:
 
     // Função para exportar a lista de pacientes para um arquivo CSV
     void exportarPacientesCSV(const std::string& nomeArquivo, int numeroPacienetes) const ;
-    void gerarMedicosAleatorios(const std::string& nomeArquivo, int numeroMedicos) const;
-    void dividirSalasPorEspecialidade(const std::string& nomeArquivo, int numeroSalas) const;
+    void gerarMedicosAleatorios(const std::string& nomeArquivo, 
+                                        const std::vector<Paciente>& pacientesCardiologia, 
+                                        const std::vector<Paciente>& pacientesPediatria, 
+                                        const std::vector<Paciente>& pacientesOrtopedia, 
+                                        const std::vector<Paciente>& pacientesNeurologia, 
+                                        const std::vector<Paciente>& pacientesDermatologia) const;
 };
 
 #endif

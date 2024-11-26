@@ -1,0 +1,245 @@
+====================== SEMANA: 1 ======================
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) Larissa
+Identificação: 349
+Especialidade: Ortopedia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Julia
+Identificação: 13
+Especialidade: Ortopedia
+Horario: 8:00 h
+================================================================= 
+Nome: João
+Identificação: 164
+Especialidade: Ortopedia
+Horario: 9:00 h
+================================================================= 
+Nome: Julia
+Identificação: 75
+Especialidade: Ortopedia
+Horario: 10:00 h
+================================================================= 
+Nome: Julia
+Identificação: 185
+Especialidade: Ortopedia
+Horario: 11:00 h
+================================================================= 
+Nome: João
+Identificação: 93
+Especialidade: Ortopedia
+Horario: 12:00 h
+================================================================= 
+Nome: Julia
+Identificação: 94
+Especialidade: Ortopedia
+Horario: 13:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 64
+Especialidade: Ortopedia
+Horario: 14:00 h
+================================================================= 
+Nome: Lucas
+Identificação: 91
+Especialidade: Ortopedia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) Larissa
+Identificação: 349
+Especialidade: Ortopedia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: João
+Identificação: 96
+Especialidade: Ortopedia
+Horario: 8:00 h
+================================================================= 
+Nome: Julia
+Identificação: 28
+Especialidade: Ortopedia
+Horario: 9:00 h
+================================================================= 
+Nome: João
+Identificação: 29
+Especialidade: Ortopedia
+Horario: 10:00 h
+================================================================= 
+Nome: Ana
+Identificação: 45
+Especialidade: Ortopedia
+Horario: 11:00 h
+================================================================= 
+Nome: Julia
+Identificação: 46
+Especialidade: Ortopedia
+Horario: 12:00 h
+================================================================= 
+Nome: Ana
+Identificação: 24
+Especialidade: Ortopedia
+Horario: 13:00 h
+================================================================= 
+Nome: João
+Identificação: 56
+Especialidade: Ortopedia
+Horario: 14:00 h
+================================================================= 
+Nome: Julia
+Identificação: 97
+Especialidade: Ortopedia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) Larissa
+Identificação: 349
+Especialidade: Ortopedia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: José
+Identificação: 59
+Especialidade: Ortopedia
+Horario: 8:00 h
+================================================================= 
+Nome: João
+Identificação: 149
+Especialidade: Ortopedia
+Horario: 9:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 133
+Especialidade: Ortopedia
+Horario: 10:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 3
+Especialidade: Ortopedia
+Horario: 11:00 h
+================================================================= 
+Nome: José
+Identificação: 7
+Especialidade: Ortopedia
+Horario: 12:00 h
+================================================================= 
+Nome: Maria
+Identificação: 90
+Especialidade: Ortopedia
+Horario: 13:00 h
+================================================================= 
+Nome: João
+Identificação: 111
+Especialidade: Ortopedia
+Horario: 14:00 h
+================================================================= 
+Nome: Lucas
+Identificação: 11
+Especialidade: Ortopedia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) Larissa
+Identificação: 349
+Especialidade: Ortopedia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Ana
+Identificação: 60
+Especialidade: Ortopedia
+Horario: 8:00 h
+================================================================= 
+Nome: José
+Identificação: 68
+Especialidade: Ortopedia
+Horario: 9:00 h
+================================================================= 
+Nome: Ana
+Identificação: 182
+Especialidade: Ortopedia
+Horario: 10:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 194
+Especialidade: Ortopedia
+Horario: 11:00 h
+================================================================= 
+Nome: José
+Identificação: 82
+Especialidade: Ortopedia
+Horario: 12:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 100
+Especialidade: Ortopedia
+Horario: 13:00 h
+================================================================= 
+Nome: Julia
+Identificação: 151
+Especialidade: Ortopedia
+Horario: 14:00 h
+================================================================= 
+Nome: Carlos
+Identificação: 52
+Especialidade: Ortopedia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) Larissa
+Identificação: 349
+Especialidade: Ortopedia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Ana
+Identificação: 99
+Especialidade: Ortopedia
+Horario: 8:00 h
+================================================================= 
+Nome: João
+Identificação: 128
+Especialidade: Ortopedia
+Horario: 9:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 77
+Especialidade: Ortopedia
+Horario: 10:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 166
+Especialidade: Ortopedia
+Horario: 11:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 69
+Especialidade: Ortopedia
+Horario: 12:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 57
+Especialidade: Ortopedia
+Horario: 13:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 198
+Especialidade: Ortopedia
+Horario: 14:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 135
+Especialidade: Ortopedia
+Horario: 15:00 h
+================================================================= 
+====================== Relatório Horas Trabalhadas: ====================== 
+Nome: Dr(a) Larissa
+Identificação: 349
+Especialidade: Ortopedia
+Horas Trabalhadas: 40
+================================================================= 
+
+
+====================== NÚMERO DE SEMANAS NESCESSÁRIAS: 1 ====================== 

@@ -125,7 +125,12 @@ void Controller::exportarPacientesCSV(const std::string& nomeArquivo,int numeroP
 
 
 
-void Controller::gerarMedicosAleatorios(const std::string& nomeArquivo, int numeroMedicos) const {
+void Controller::gerarMedicosAleatorios(const std::string& nomeArquivo, 
+                                        const std::vector<Paciente>& pacientesCardiologia, 
+                                        const std::vector<Paciente>& pacientesPediatria, 
+                                        const std::vector<Paciente>& pacientesOrtopedia, 
+                                        const std::vector<Paciente>& pacientesNeurologia, 
+                                        const std::vector<Paciente>& pacientesDermatologia) const {
     // Lista para armazenar os médicos gerados
     std::vector<Medico> medicosAleatorios;
 
@@ -134,56 +139,55 @@ void Controller::gerarMedicosAleatorios(const std::string& nomeArquivo, int nume
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> idDist(1, 1000); // IDs únicos entre 1 e 1000
 
-    // Especialidades disponíveis
-    const std::vector<std::string> especialidades = {"Cardiologia", "Neurologia", "Ortopedia", "Pediatria", "Dermatologia"};
+    // Especialidades disponíveis e seus arrays de pacientes
+    std::vector<std::pair<std::string, const std::vector<Paciente>&>> especialidades = {
+        {"Cardiologia", pacientesCardiologia},
+        {"Pediatria", pacientesPediatria},
+        {"Ortopedia", pacientesOrtopedia},
+        {"Neurologia", pacientesNeurologia},
+        {"Dermatologia", pacientesDermatologia}
+    };
 
-    // Verifica se o número de médicos é menor que o número de especialidades
-    int numEspecialidades = especialidades.size();
-    if (numeroMedicos < numEspecialidades) {
-        std::cerr << "Número de médicos menor que o número de especialidades. Garantindo ao menos um médico por especialidade.\n";
-        numeroMedicos = numEspecialidades;  // Força o número de médicos a ser pelo menos o número de especialidades
-    }
+    // Identificar a especialidade com o maior número de pacientes
+    auto maiorArray = std::max_element(especialidades.begin(), especialidades.end(),
+        [](const std::pair<std::string, const std::vector<Paciente>&>& a,
+           const std::pair<std::string, const std::vector<Paciente>&>& b) {
+            return a.second.size() < b.second.size();
+        });
 
-    // Criar médicos para garantir que pelo menos um médico seja alocado para cada especialidade
-    std::vector<std::string> especialidadesDisponiveis = especialidades;
-    std::shuffle(especialidadesDisponiveis.begin(), especialidadesDisponiveis.end(), gen); // Embaralha as especialidades
+    // Criar um médico para cada especialidade
+    for (std::vector<std::pair<std::string, const std::vector<Paciente>&>>::const_iterator it = especialidades.begin(); it != especialidades.end(); ++it) {
+        const std::string& especialidade = it->first;
+        const std::vector<Paciente>& pacientes = it->second;
 
-    // Atribui um médico para cada especialidade
-    for (int i = 0; i < numEspecialidades; ++i) {
         // Gerar ID único para o médico
         int id = idDist(gen);
 
         // Gerar nome aleatório
         std::string nome = gerarNomeAleatorio();
 
-        // Atribuir a especialidade
-        std::string especialidade = especialidadesDisponiveis[i];
-
-        // Criar o objeto Medico
+        // Criar o objeto Médico
         Medico medico(id, nome, especialidade);
 
         // Adicionar à lista
         medicosAleatorios.push_back(medico);
     }
 
-    // Gerar médicos restantes (se houver) e distribuí-los aleatoriamente entre as especialidades
-    int numeroGerado = medicosAleatorios.size(); // Número de médicos já gerados
-    while (numeroGerado < numeroMedicos) {
+    // Adicionar um segundo médico apenas para a especialidade com mais pacientes
+    if (maiorArray != especialidades.end()) {
+        const std::string& especialidade = maiorArray->first;
+
         // Gerar ID único para o médico
         int id = idDist(gen);
 
         // Gerar nome aleatório
         std::string nome = gerarNomeAleatorio();
 
-        // Escolher uma especialidade aleatória
-        std::string especialidade = especialidades[rand() % numEspecialidades];
-
-        // Criar o objeto Medico
+        // Criar o objeto Médico
         Medico medico(id, nome, especialidade);
 
         // Adicionar à lista
         medicosAleatorios.push_back(medico);
-        numeroGerado++;  // Incrementa o número de médicos gerados
     }
 
     // Salvar os médicos no arquivo CSV
@@ -197,10 +201,10 @@ void Controller::gerarMedicosAleatorios(const std::string& nomeArquivo, int nume
     arquivo << "ID,Nome,Especialidade\n";
 
     // Escreve os dados de cada médico
-    for (const auto& medico : medicosAleatorios) {
-        arquivo << medico.getId() << ","
-                "Dr(a) " << medico.getNome() << ","
-                << medico.getEspecialidade() << "\n";
+    for (std::vector<Medico>::const_iterator it = medicosAleatorios.begin(); it != medicosAleatorios.end(); ++it) {
+        arquivo << it->getId() << ","
+                << "Dr(a) " << it->getNome() << ","
+                << it->getEspecialidade() << "\n";
     }
 
     arquivo.close();
@@ -208,60 +212,5 @@ void Controller::gerarMedicosAleatorios(const std::string& nomeArquivo, int nume
 }
 
 
-void Controller::dividirSalasPorEspecialidade(const std::string& nomeArquivo, int numeroSalas) const {
-    // Lista de especialidades
-    const std::vector<std::string> especialidades = {"Cardiologia", "Neurologia", "Ortopedia", "Pediatria", "Dermatologia"};
 
-    // Verifica se o número de salas é suficiente para garantir pelo menos uma para cada especialidad
-    int num  = especialidades.size();
-    if (numeroSalas < num ) {
-        std::cerr << "Erro: O número de salas é menor que o número de especialidades. Garantindo pelo menos uma sala para cada especialidade.\n";
-        return;
-    }
 
-    // Geradores de números aleatórios
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> salasDist(1, numeroSalas);
-
-    // Embaralha as especialidades para distribuir as salas de forma aleatória
-    std::vector<std::string> especialidadesDisponiveis = especialidades;
-    std::shuffle(especialidadesDisponiveis.begin(), especialidadesDisponiveis.end(), gen);
-
-    // Divide as salas entre as especialidades
-    std::vector<std::pair<std::string, int>> salasPorEspecialidade;
-    int salasRestantes = numeroSalas;
-
-    // Atribui pelo menos uma sala para cada especialidade
-    for (const auto& especialidade : especialidadesDisponiveis) {
-        int salasParaEspecialidade = 1; // Garantir ao menos uma sala
-        salasRestantes--;
-        salasPorEspecialidade.push_back({especialidade, salasParaEspecialidade});
-    }
-
-    // Distribui as salas restantes de forma aleatória
-    while (salasRestantes > 0) {
-        // Escolhe uma especialidade aleatória para adicionar uma sala
-        int index = rand() % especialidades.size();
-        salasPorEspecialidade[index].second++;
-        salasRestantes--;
-    }
-
-    // Salva os dados em um arquivo CSV
-    std::ofstream arquivo(nomeArquivo);
-    if (!arquivo.is_open()) {
-        std::cerr << "Erro ao abrir o arquivo " << nomeArquivo << " para escrita.\n";
-        return;
-    }
-
-    // Escreve o cabeçalho do CSV
-    arquivo << "Especialidade,Quantidade\n";
-
-    // Escreve os dados de cada especialidade e quantidade de salas
-    for (const auto& item : salasPorEspecialidade) {
-        arquivo << item.first << "," << item.second << "\n";
-    }
-
-    arquivo.close();
-    std::cout << "Dados das salas exportados para " << nomeArquivo << " com sucesso.\n";
-}

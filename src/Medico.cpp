@@ -3,7 +3,9 @@
 
 // Construtor da classe Medico que inicializa os atributos
 Medico::Medico(int id, const std::string& nome, const std::string& especialidade)
-    : id(id), nome(nome), especialidade(especialidade) {}
+    : id(id), nome(nome), especialidade(especialidade) {
+        this->horasTrabalhadas = 0;
+    }
 
 Medico::Medico()
 {
@@ -30,7 +32,7 @@ int Medico::getHorastrabalhadas() const {
 }
 
 void Medico::atendimentoCompleto() {
-    this->horasTrabalhadas++;
+    this->horasTrabalhadas = this->horasTrabalhadas + 1;
 }
 
 

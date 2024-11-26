@@ -1,0 +1,293 @@
+====================== SEMANA: 1 ======================
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) José
+Identificação: 916
+Especialidade: Neurologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Ana
+Identificação: 121
+Especialidade: Neurologia
+Horario: 8:00 h
+================================================================= 
+Nome: Julia
+Identificação: 30
+Especialidade: Neurologia
+Horario: 9:00 h
+================================================================= 
+Nome: Maria
+Identificação: 62
+Especialidade: Neurologia
+Horario: 10:00 h
+================================================================= 
+Nome: Ana
+Identificação: 153
+Especialidade: Neurologia
+Horario: 11:00 h
+================================================================= 
+Nome: José
+Identificação: 36
+Especialidade: Neurologia
+Horario: 12:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 195
+Especialidade: Neurologia
+Horario: 13:00 h
+================================================================= 
+Nome: Julia
+Identificação: 102
+Especialidade: Neurologia
+Horario: 14:00 h
+================================================================= 
+Nome: Maria
+Identificação: 109
+Especialidade: Neurologia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) José
+Identificação: 916
+Especialidade: Neurologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: João
+Identificação: 1
+Especialidade: Neurologia
+Horario: 8:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 148
+Especialidade: Neurologia
+Horario: 9:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 66
+Especialidade: Neurologia
+Horario: 10:00 h
+================================================================= 
+Nome: Ana
+Identificação: 170
+Especialidade: Neurologia
+Horario: 11:00 h
+================================================================= 
+Nome: João
+Identificação: 73
+Especialidade: Neurologia
+Horario: 12:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 83
+Especialidade: Neurologia
+Horario: 13:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 199
+Especialidade: Neurologia
+Horario: 14:00 h
+================================================================= 
+Nome: Ana
+Identificação: 6
+Especialidade: Neurologia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) José
+Identificação: 916
+Especialidade: Neurologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Maria
+Identificação: 33
+Especialidade: Neurologia
+Horario: 8:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 173
+Especialidade: Neurologia
+Horario: 9:00 h
+================================================================= 
+Nome: Carlos
+Identificação: 188
+Especialidade: Neurologia
+Horario: 10:00 h
+================================================================= 
+Nome: João
+Identificação: 41
+Especialidade: Neurologia
+Horario: 11:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 42
+Especialidade: Neurologia
+Horario: 12:00 h
+================================================================= 
+Nome: Maria
+Identificação: 4
+Especialidade: Neurologia
+Horario: 13:00 h
+================================================================= 
+Nome: Maria
+Identificação: 120
+Especialidade: Neurologia
+Horario: 14:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 71
+Especialidade: Neurologia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) José
+Identificação: 916
+Especialidade: Neurologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: José
+Identificação: 21
+Especialidade: Neurologia
+Horario: 8:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 76
+Especialidade: Neurologia
+Horario: 9:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 80
+Especialidade: Neurologia
+Horario: 10:00 h
+================================================================= 
+Nome: Lucas
+Identificação: 49
+Especialidade: Neurologia
+Horario: 11:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 54
+Especialidade: Neurologia
+Horario: 12:00 h
+================================================================= 
+Nome: José
+Identificação: 132
+Especialidade: Neurologia
+Horario: 13:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 18
+Especialidade: Neurologia
+Horario: 14:00 h
+================================================================= 
+Nome: Julia
+Identificação: 183
+Especialidade: Neurologia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) José
+Identificação: 916
+Especialidade: Neurologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Larissa
+Identificação: 118
+Especialidade: Neurologia
+Horario: 8:00 h
+================================================================= 
+Nome: Julia
+Identificação: 134
+Especialidade: Neurologia
+Horario: 9:00 h
+================================================================= 
+Nome: Carlos
+Identificação: 141
+Especialidade: Neurologia
+Horario: 10:00 h
+================================================================= 
+Nome: José
+Identificação: 63
+Especialidade: Neurologia
+Horario: 11:00 h
+================================================================= 
+Nome: José
+Identificação: 191
+Especialidade: Neurologia
+Horario: 12:00 h
+================================================================= 
+Nome: Carlos
+Identificação: 23
+Especialidade: Neurologia
+Horario: 13:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 84
+Especialidade: Neurologia
+Horario: 14:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 181
+Especialidade: Neurologia
+Horario: 15:00 h
+================================================================= 
+====================== SEMANA: 2 ======================
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) José
+Identificação: 916
+Especialidade: Neurologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Ana
+Identificação: 145
+Especialidade: Neurologia
+Horario: 8:00 h
+================================================================= 
+Nome: Ana
+Identificação: 189
+Especialidade: Neurologia
+Horario: 9:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 86
+Especialidade: Neurologia
+Horario: 10:00 h
+================================================================= 
+Nome: Lucas
+Identificação: 27
+Especialidade: Neurologia
+Horario: 11:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 136
+Especialidade: Neurologia
+Horario: 12:00 h
+================================================================= 
+Nome: Carlos
+Identificação: 159
+Especialidade: Neurologia
+Horario: 13:00 h
+================================================================= 
+Nome: Lucas
+Identificação: 58
+Especialidade: Neurologia
+Horario: 14:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 48
+Especialidade: Neurologia
+Horario: 15:00 h
+================================================================= 
+====================== Relatório Horas Trabalhadas: ====================== 
+Nome: Dr(a) José
+Identificação: 916
+Especialidade: Neurologia
+Horas Trabalhadas: 48
+================================================================= 
+
+
+====================== NÚMERO DE SEMANAS NESCESSÁRIAS: 2 ====================== 

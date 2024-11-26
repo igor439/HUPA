@@ -8,6 +8,7 @@ Pagina::Pagina(int tamanho, int tipo){
     this->tamanhoLivre = tamanho; // Inicializa o espaço livre como o tamanho total
     this->tamanho = tamanho; // Define o tamanho total
     this->tipo = tipo; // Define o tipo da página (por exemplo, folha ou interna)
+    this->numeroPaginasAssociadas = 0;
     this->pagPai = nullptr; // Inicializa o ponteiro para a página pai como nulo
     this->proxPag = nullptr;
     this->antPag = nullptr;
@@ -206,3 +207,9 @@ void Pagina::migrarPai()
     }
 
 }
+
+
+int Pagina::getNumeroPaginasAssociadas() const { return this->numeroPaginasAssociadas;}
+
+
+void Pagina::setNumeroPaginasAssociadas(int num){ this->numeroPaginasAssociadas  = num; }

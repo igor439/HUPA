@@ -1,0 +1,299 @@
+====================== SEMANA: 1 ======================
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) Larissa
+Identificação: 562
+Especialidade: Cardiologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: José
+Identificação: 5
+Especialidade: Cardiologia
+Horario: 8:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 65
+Especialidade: Cardiologia
+Horario: 9:00 h
+================================================================= 
+Nome: João
+Identificação: 125
+Especialidade: Cardiologia
+Horario: 10:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 142
+Especialidade: Cardiologia
+Horario: 11:00 h
+================================================================= 
+Nome: Maria
+Identificação: 19
+Especialidade: Cardiologia
+Horario: 12:00 h
+================================================================= 
+Nome: João
+Identificação: 180
+Especialidade: Cardiologia
+Horario: 13:00 h
+================================================================= 
+Nome: Lucas
+Identificação: 138
+Especialidade: Cardiologia
+Horario: 14:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 72
+Especialidade: Cardiologia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) Maria
+Identificação: 595
+Especialidade: Cardiologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Carlos
+Identificação: 81
+Especialidade: Cardiologia
+Horario: 8:00 h
+================================================================= 
+Nome: Ana
+Identificação: 98
+Especialidade: Cardiologia
+Horario: 9:00 h
+================================================================= 
+Nome: Lucas
+Identificação: 169
+Especialidade: Cardiologia
+Horario: 10:00 h
+================================================================= 
+Nome: Maria
+Identificação: 8
+Especialidade: Cardiologia
+Horario: 11:00 h
+================================================================= 
+Nome: João
+Identificação: 53
+Especialidade: Cardiologia
+Horario: 12:00 h
+================================================================= 
+Nome: Carlos
+Identificação: 122
+Especialidade: Cardiologia
+Horario: 13:00 h
+================================================================= 
+Nome: Lucas
+Identificação: 158
+Especialidade: Cardiologia
+Horario: 14:00 h
+================================================================= 
+Nome: Carlos
+Identificação: 35
+Especialidade: Cardiologia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) Larissa
+Identificação: 562
+Especialidade: Cardiologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: José
+Identificação: 177
+Especialidade: Cardiologia
+Horario: 8:00 h
+================================================================= 
+Nome: Lucas
+Identificação: 25
+Especialidade: Cardiologia
+Horario: 9:00 h
+================================================================= 
+Nome: Lucas
+Identificação: 32
+Especialidade: Cardiologia
+Horario: 10:00 h
+================================================================= 
+Nome: João
+Identificação: 103
+Especialidade: Cardiologia
+Horario: 11:00 h
+================================================================= 
+Nome: Maria
+Identificação: 104
+Especialidade: Cardiologia
+Horario: 12:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 105
+Especialidade: Cardiologia
+Horario: 13:00 h
+================================================================= 
+Nome: João
+Identificação: 154
+Especialidade: Cardiologia
+Horario: 14:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 174
+Especialidade: Cardiologia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) Maria
+Identificação: 595
+Especialidade: Cardiologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Julia
+Identificação: 190
+Especialidade: Cardiologia
+Horario: 8:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 192
+Especialidade: Cardiologia
+Horario: 9:00 h
+================================================================= 
+Nome: Ana
+Identificação: 51
+Especialidade: Cardiologia
+Horario: 10:00 h
+================================================================= 
+Nome: Ana
+Identificação: 26
+Especialidade: Cardiologia
+Horario: 11:00 h
+================================================================= 
+Nome: José
+Identificação: 131
+Especialidade: Cardiologia
+Horario: 12:00 h
+================================================================= 
+Nome: Julia
+Identificação: 39
+Especialidade: Cardiologia
+Horario: 13:00 h
+================================================================= 
+Nome: João
+Identificação: 171
+Especialidade: Cardiologia
+Horario: 14:00 h
+================================================================= 
+Nome: Julia
+Identificação: 162
+Especialidade: Cardiologia
+Horario: 15:00 h
+================================================================= 
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) Larissa
+Identificação: 562
+Especialidade: Cardiologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Fernanda
+Identificação: 157
+Especialidade: Cardiologia
+Horario: 8:00 h
+================================================================= 
+Nome: Maria
+Identificação: 10
+Especialidade: Cardiologia
+Horario: 9:00 h
+================================================================= 
+Nome: Carlos
+Identificação: 124
+Especialidade: Cardiologia
+Horario: 10:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 106
+Especialidade: Cardiologia
+Horario: 11:00 h
+================================================================= 
+Nome: Maria
+Identificação: 146
+Especialidade: Cardiologia
+Horario: 12:00 h
+================================================================= 
+Nome: Carlos
+Identificação: 17
+Especialidade: Cardiologia
+Horario: 13:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 67
+Especialidade: Cardiologia
+Horario: 14:00 h
+================================================================= 
+Nome: José
+Identificação: 16
+Especialidade: Cardiologia
+Horario: 15:00 h
+================================================================= 
+====================== SEMANA: 2 ======================
+====================== Médico Resposável: ====================== 
+Nome: Dr(a) Maria
+Identificação: 595
+Especialidade: Cardiologia
+================================================================= 
+
+====================== Pacientes: ====================== 
+Nome: Pedro
+Identificação: 119
+Especialidade: Cardiologia
+Horario: 8:00 h
+================================================================= 
+Nome: Pedro
+Identificação: 31
+Especialidade: Cardiologia
+Horario: 9:00 h
+================================================================= 
+Nome: Larissa
+Identificação: 197
+Especialidade: Cardiologia
+Horario: 10:00 h
+================================================================= 
+Nome: Lucas
+Identificação: 115
+Especialidade: Cardiologia
+Horario: 11:00 h
+================================================================= 
+Nome: Ana
+Identificação: 113
+Especialidade: Cardiologia
+Horario: 12:00 h
+================================================================= 
+Nome: Fernanda
+Identificação: 123
+Especialidade: Cardiologia
+Horario: 13:00 h
+================================================================= 
+Nome: José
+Identificação: 137
+Especialidade: Cardiologia
+Horario: 14:00 h
+================================================================= 
+Nome: Carlos
+Identificação: 116
+Especialidade: Cardiologia
+Horario: 15:00 h
+================================================================= 
+====================== Relatório Horas Trabalhadas: ====================== 
+Nome: Dr(a) Larissa
+Identificação: 562
+Especialidade: Cardiologia
+Horas Trabalhadas: 24
+================================================================= 
+====================== Relatório Horas Trabalhadas: ====================== 
+Nome: Dr(a) Maria
+Identificação: 595
+Especialidade: Cardiologia
+Horas Trabalhadas: 24
+================================================================= 
+
+
+====================== NÚMERO DE SEMANAS NESCESSÁRIAS: 2 ====================== 
