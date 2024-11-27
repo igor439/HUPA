@@ -7,10 +7,43 @@
 #include "..\include\ElementoPaginaFolha.h" // Inclui a classe ElementoPaginaFolha para elementos das folhas da árvore B+.
 #include "..\include\ElementoPagina.h" // Inclui a classe ElementoPagina para elementos de índice na árvore B+.
 #include <algorithm>  // Para usar std::swap
+#include <ctime>
+#include <string>
+#include <sstream>
+#include <iomanip>
 
+std::string getFormattedDateAndWeekday(int diasUteis) {
+    // Data inicial
+    std::tm dataInicial = {};
+    dataInicial.tm_year = 2024 - 1900; // Ano ajustado para struct tm
+    dataInicial.tm_mon = 10;          // Novembro (meses começam do 0)
+    dataInicial.tm_mday = 26;         // Dia inicial
 
+    int diasTotais = 0;
 
+    while (diasUteis > 0) {
+        // Adicionar um dia
+        dataInicial.tm_mday++;
+        std::mktime(&dataInicial); // Atualiza a data automaticamente
 
+        // Verificar se o dia é útil (não sábado ou domingo)
+        if (dataInicial.tm_wday != 0 && dataInicial.tm_wday != 6) { // 0 = Domingo, 6 = Sábado
+            diasUteis--;
+        }
+
+        diasTotais++;
+    }
+
+    // Array com os dias da semana
+    const char* diasSemana[] = {"Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", 
+                                "Quinta-Feira", "Sexta-Feira", "Sábado"};
+
+    // Formatar a data
+    std::ostringstream oss;
+    oss << std::put_time(&dataInicial, "%d/%m/%Y") << " - " << diasSemana[dataInicial.tm_wday];
+
+    return oss.str();
+}
 
 // Função auxiliar para ajustar o heap máximo
 void ajusteHeap(std::vector<Paciente>& vec, int n, int i) {
@@ -94,7 +127,6 @@ Pagina * AdcionarNaArvore(Pagina * pagPai, ElementoPagina *novoElementoIndice){
     
 
 }
-
 
 
 Pagina* processarPacientes(std::vector<Paciente>& pacientes) {
@@ -215,20 +247,24 @@ void gerarCronograma(Pagina* pagina, std::vector<Medico> medicos) {
         Pagina * raizAncora = pagina;
 
 
+        int diasUteis = 0;
+
         while (pagina->getProxPag() != nullptr) { // Loop para exibir informações das páginas.
-
-
-            dias++;
-            diaplayMedico = true;
+            diasUteis++;
             horas = 8;
 
-            if (dias%5 == 1 || dias == 1)
-            {
-                arquivo << "====================== SEMANA: " << semanas << " ======================\n";
+            // Obter a data formatada ignorando fins de semana
+            std::string dataFormatada = getFormattedDateAndWeekday(diasUteis);
+
+            // Cabeçalho por semana
+            if (diasUteis % 5 == 1 || diasUteis == 1) {
+                arquivo << "====================== SEMANA: " << semanas 
+                        << " / " << dataFormatada << " ======================\n";
                 semanas++;
-            }
-            
-            
+            } else {
+                arquivo << "====================== DIA: " << dataFormatada 
+                        << " ======================\n";
+            }            
 
             if (diaplayMedico)
             {
@@ -305,19 +341,26 @@ void gerarCronograma(Pagina* pagina, std::vector<Medico> medicos) {
         bool diaplayMedico = true;
         Pagina * raizAncora = pagina;
         int alternador = 0;
+        int diasUteis = 0;
 
 
         while (pagina->getProxPag() != nullptr) { // Loop para exibir informações das páginas.
-
-
+            diasUteis++;
             dias++;
             diaplayMedico = true;
             horas = 8;
 
-            if (dias%5 == 1 || dias == 1)
-            {
-                arquivo << "====================== SEMANA: " << semanas << " ======================\n";
+            // Obter a data formatada ignorando fins de semana
+            std::string dataFormatada = getFormattedDateAndWeekday(diasUteis);
+
+            // Cabeçalho por semana
+            if (diasUteis % 5 == 1 || diasUteis == 1) {
+                arquivo << "====================== SEMANA: " << semanas 
+                        << " / " << dataFormatada << " ======================\n";
                 semanas++;
+            } else {
+                arquivo << "====================== DIA: " << dataFormatada 
+                        << " ======================\n";
             }
             
             
